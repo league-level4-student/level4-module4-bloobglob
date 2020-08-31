@@ -3,10 +3,10 @@ package _03_polymorphs;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class BluePolymorph extends Polymorph{
+public class RedPolymorph extends Polymorph{
 	private int width = 50;
 	private int height = 50;
-	BluePolymorph(int x, int y) {
+	RedPolymorph(int x, int y) {
 		super(x, y);
 	}
 	int getWidth() {
@@ -31,8 +31,9 @@ public class BluePolymorph extends Polymorph{
 	}
 	@Override
 	public void draw(Graphics g) {
-		g.setColor(Color.blue);
+		g.setColor(Color.red);
 		g.fillRect(getX(), getY(), width, height);
 	}
 	
 }
+

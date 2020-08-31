@@ -2,11 +2,15 @@ package _03_polymorphs;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.MouseInfo;
+import java.awt.Point;
 
-public class BluePolymorph extends Polymorph{
+import javax.swing.JOptionPane;
+
+public class ButtonPolymorph extends Polymorph{
 	private int width = 50;
 	private int height = 50;
-	BluePolymorph(int x, int y) {
+	ButtonPolymorph(int x, int y) {
 		super(x, y);
 	}
 	int getWidth() {
@@ -31,8 +35,10 @@ public class BluePolymorph extends Polymorph{
 	}
 	@Override
 	public void draw(Graphics g) {
-		g.setColor(Color.blue);
+		Point p = MouseInfo.getPointerInfo().getLocation();
+		g.setColor(Color.orange);
 		g.fillRect(getX(), getY(), width, height);
 	}
 	
 }
+
